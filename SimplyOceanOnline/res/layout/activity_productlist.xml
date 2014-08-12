@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/app_bg" >
+
+    <!-- title bar -->
+    <include 
+        layout="@layout/title_bar"
+        android:id="@+id/titleBar"
+        android:layout_alignParentTop="true" />
+
+    <GridView
+        android:id="@+id/productGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:numColumns="1" >
+    </GridView>
+
+    <Button
+        android:id="@+id/goCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/shopping_cart" />
+
+</RelativeLayout>

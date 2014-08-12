@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/app_bg" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/product_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/product_pic"/>
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/product_image"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/product_qty"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/product_image"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/product_image"
+        android:ems="7"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/goDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/product_qty"
+        android:layout_alignBottom="@+id/product_qty"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/product_qty"
+        android:layout_alignBaseline="@+id/product_qty"
+        android:text="@string/delete_product" />
+
+</RelativeLayout>

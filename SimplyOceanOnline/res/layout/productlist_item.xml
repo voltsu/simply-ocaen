@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp" >
+    
+	<com.android.volley.toolbox.NetworkImageView
+	    android:id="@+id/product_image"
+	    android:layout_width="70dp"
+	    android:layout_height="70dp" 
+	    android:scaleType="centerCrop"
+	    android:contentDescription="@string/product_pic" />
+
+	<TextView
+	    android:id="@+id/product_name"
+	    android:layout_width="80dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/product_image"
+	    android:layout_toLeftOf="@+id/goDetails"
+	    android:textColor="#000000"
+	    android:textSize="18sp"
+	    android:text=""
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<Button
+	    android:id="@+id/goPurchase"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignBottom="@+id/product_name"
+	    android:layout_marginRight="10dp"	   
+	    android:text="@string/purchase" />
+	
+	<Button
+	    android:id="@+id/goDetails"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/goPurchase"
+	    android:layout_alignBottom="@+id/goPurchase"
+	    android:layout_toLeftOf="@+id/goPurchase"
+	    android:layout_marginLeft="50dp"
+	    android:layout_marginRight="10dp"
+	    android:text="@string/show_details" />
+
+	<EditText
+	    android:id="@+id/product_qty"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/goPurchase"
+	    android:layout_toLeftOf="@+id/plus"
+	    android:layout_toRightOf="@+id/minus"
+	    android:ems="10"
+	    android:inputType="numberSigned"
+	    android:text="@string/defult_qty" >
+	    <requestFocus />
+	</EditText>
+
+	<Button
+	    android:id="@+id/minus"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
+	    android:layout_alignBaseline="@+id/product_qty"   
+		android:layout_above="@+id/goPurchase"
+		android:layout_alignLeft="@+id/goDetails"
+	    android:text="@string/minus" />
+	
+	<Button
+	    android:id="@+id/plus"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
+	    android:layout_alignBaseline="@+id/product_qty" 
+		android:layout_above="@+id/goPurchase"
+		android:layout_alignRight="@+id/goPurchase"
+	    android:text="@string/plus" />
+</RelativeLayout>
+

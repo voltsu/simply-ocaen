@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+    
+    <!-- title bar -->
+    <include 
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+    
+    <RelativeLayout
+        android:id="@+id/registry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/title_bar">
+        
+	    <EditText
+	        android:id="@+id/reg_phone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:ems="10"
+	        android:layout_marginTop="5dp"
+	        android:hint="@string/reg_phone"
+	        android:inputType="phone" >
+	        <requestFocus />
+	    </EditText>
+	
+	    <EditText
+	        android:id="@+id/reg_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/reg_phone"
+	        android:ems="10"
+	        android:layout_marginTop="5dp"
+	        android:hint="@string/reg_password"
+	        android:inputType="textPassword" />
+			<LinearLayout
+		    android:id="@+id/verifyCodeLayout"
+		    android:layout_height="wrap_content"
+		    android:layout_width="match_parent"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@+id/reg_password">
+			<Button
+		        android:id="@+id/get_verifycode"		        
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        android:text="@string/get_verifycode" />
+	
+		    <EditText
+		        android:id="@+id/reg_verifycode"
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:ems="10"
+		        android:layout_weight="1.5"
+		        android:hint="@string/reg_verifycode"
+		        android:inputType="number" />
+		</LinearLayout>
+
+
+	    <Button
+	        android:id="@+id/reg_now"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/verifyCodeLayout"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/reg_now" />
+	    
+	    <CheckBox
+	        android:id="@+id/agree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/reg_now"
+	        android:textColor="#000000"
+	        android:checked="true"
+	        android:text="@string/agree" />
+
+	    <TextView
+	        android:id="@+id/policy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/agree"
+	        android:layout_alignBottom="@+id/agree"
+	        android:layout_marginLeft="17dp"
+	        android:layout_toRightOf="@+id/agree"
+	        android:textColor="#000000"
+	        android:textStyle="bold"
+	        android:textSize="16.5sp"
+	        android:text="@string/policy" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

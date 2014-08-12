@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+    
+    <!-- title bar -->
+
+    <include 
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <Button
+        android:id="@+id/go_registry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/registry" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+	    <EditText
+	        android:id="@+id/login_username"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:layout_marginTop="5dp"
+	        android:hint="@string/username"
+	        android:inputType="text" >
+	
+	        <requestFocus />
+	    </EditText>
+	
+	    <EditText
+	        android:id="@+id/login_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:layout_marginTop="5dp"
+	        android:hint="@string/password"
+	        android:inputType="textPassword" />
+	
+	    <Button
+	        android:id="@+id/login_submit"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/login" />
+    </LinearLayout>
+
+</RelativeLayout>
